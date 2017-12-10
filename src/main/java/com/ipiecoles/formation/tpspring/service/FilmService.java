@@ -11,16 +11,13 @@ import java.util.List;
 @Service
 public class FilmService {
 
+    @Autowired
     private FilmRepository filmRepository;
 
     public List<Film> findNouveautesParType(Type type) {
         return filmRepository.findParType(type);
     }
 
-    @Autowired
-    public void setFilmRepository(FilmRepository filmRepository) {
-        this.filmRepository = filmRepository;
-    }
 
 
 }

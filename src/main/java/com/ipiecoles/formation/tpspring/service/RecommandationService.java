@@ -11,7 +11,9 @@ import java.util.List;
 @Service
 public class RecommandationService {
 
+	@Autowired
 	private FilmService filmService;
+	@Autowired
 	private UserRepository userRepository;
 
 	public Film getRecommandation(Long idUser) {
@@ -28,13 +30,4 @@ public class RecommandationService {
 		return null;
 	}
 
-	@Autowired
-	public void setFilmService(FilmService filmService) {
-		this.filmService = filmService;
-	}
-
-	@Autowired
-	public void setUserRepository(UserRepository userRepository) {
-		this.userRepository = userRepository;
-	}
 }
