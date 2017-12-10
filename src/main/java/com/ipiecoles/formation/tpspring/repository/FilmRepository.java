@@ -5,9 +5,11 @@ import java.util.List;
 
 import com.ipiecoles.formation.tpspring.model.Film;
 import com.ipiecoles.formation.tpspring.model.Type;
+import org.springframework.stereotype.Repository;
 
 import static java.util.stream.Collectors.toList;
 
+@Repository
 public class FilmRepository {
 
     private List<Film> films = new ArrayList<>();

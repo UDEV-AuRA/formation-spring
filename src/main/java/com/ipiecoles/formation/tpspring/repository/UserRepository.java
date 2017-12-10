@@ -5,7 +5,9 @@ import java.util.List;
 
 import com.ipiecoles.formation.tpspring.model.Type;
 import com.ipiecoles.formation.tpspring.model.User;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class UserRepository {
 
     private List<User> users = new ArrayList<>();
