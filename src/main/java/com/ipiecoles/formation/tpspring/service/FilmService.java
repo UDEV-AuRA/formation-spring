@@ -21,5 +21,7 @@ public class FilmService {
     }
 
 
-
+    public Film findByTitle(String title) {
+        return filmRepository.findByTitle(title);
+    }
 }

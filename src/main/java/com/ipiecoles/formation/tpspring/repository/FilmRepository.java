@@ -29,4 +29,8 @@ public class FilmRepository {
     public List<Film> findParType(Type type) {
         return films.stream().filter(f -> f.getType() == type).collect(toList());
     }
+
+    public Film findByTitle(String title) {
+        return films.stream().filter(f -> f.getTitre().equals(title)).findFirst().orElse(null);
+    }
 }
