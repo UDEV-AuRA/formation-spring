@@ -12,12 +12,8 @@ public class UserRepository {
 
     private List<User> users = new ArrayList<>();
 
-    {
-        User john = new User();
-        john.setId(1L);
-        john.setLogin("john");
-        john.setType(Type.SF);
-        users.add(john);
+    public UserRepository(User defaultUser) {
+        this.users.add(defaultUser);
     }
 
     public User findById(Long idUser) {

@@ -11,7 +11,6 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("RecommandationService")
-@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class RecommandationService {
 
 	private FilmService filmService;

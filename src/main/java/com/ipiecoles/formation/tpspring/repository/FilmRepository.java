@@ -14,16 +14,8 @@ public class FilmRepository {
 
     private List<Film> films = new ArrayList<>();
 
-    {
-        Film justiceLeague = new Film();
-        justiceLeague.setTitre("Justice League");
-        justiceLeague.setType(Type.SF);
-        films.add(justiceLeague);
-
-        Film epouseMoi = new Film();
-        epouseMoi.setTitre("Epouse-moi mon pote");
-        epouseMoi.setType(Type.HUMOUR);
-        films.add(epouseMoi);
+    public FilmRepository(List<Film> films) {
+        this.films = films;
     }
 
     public List<Film> findParType(Type type) {

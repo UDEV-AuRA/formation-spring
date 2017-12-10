@@ -10,14 +10,11 @@ public class AvecSpringAnnotation {
 
     @Autowired
     private RecommandationService recommandationService1;
-    @Autowired
-    private RecommandationService recommandationService2;
 
     public static void main(String... args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.ipiecoles.formation.tpspring");
         AvecSpringAnnotation bean = applicationContext.getBean(AvecSpringAnnotation.class);
         System.out.println(bean.recommandationService1.getRecommandation(1L));
-        System.out.println(bean.recommandationService2.getRecommandation(1L));
         applicationContext.close();
     }
 
