@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="filmRepository"
+		class="com.ipiecoles.formation.tpspring.repository.FilmRepository">
+	</bean>
+	<bean id="userRepository"
+		class="com.ipiecoles.formation.tpspring.repository.UserRepository">
+	</bean>
+
+	<bean id="filmService" class="com.ipiecoles.formation.tpspring.service.FilmService">
+		<property name="filmRepository" ref="filmRepository"></property>
+	</bean>
+	<bean id="recommandationService"
+		class="com.ipiecoles.formation.tpspring.service.RecommandationService">
+		<property name="filmService" ref="filmService"></property>
+		<property name="userRepository" ref="userRepository"></property>
+	</bean>
+
+</beans>
