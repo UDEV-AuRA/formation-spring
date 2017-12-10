@@ -8,7 +8,15 @@ import com.ipiecoles.formation.tpspring.service.RecommandationService;
 
 public class SansSpring {
 	public static void main(String... args) {
-		RecommandationService recommandationService = null;//to complete
+		FilmRepository filmRepository = new FilmRepository();
+		UserRepository userRepository = new UserRepository();
+
+		FilmService filmService = new FilmService();
+		filmService.setFilmRepository(filmRepository);
+		RecommandationService recommandationService = new RecommandationService();
+		recommandationService.setFilmService(filmService);
+		recommandationService.setUserRepository(userRepository);
+
 		Film recommandation = recommandationService.getRecommandation(1L);
 		System.out.println(recommandation);
 	}
