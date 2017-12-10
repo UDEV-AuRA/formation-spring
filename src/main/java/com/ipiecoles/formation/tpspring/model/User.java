@@ -1,13 +1,23 @@
 package com.ipiecoles.formation.tpspring.model;
 
+import javax.persistence.*;
 import java.util.*;
 
+@Entity
 public class User {
 
+    @Id
     private Long id;
+    @Column
     private String login;
+    @Column
+    @Enumerated(EnumType.STRING)
     private Type type;
+    @ManyToMany
+    @JoinTable(name = "user_films_avoir", joinColumns = @JoinColumn(name = "id_user"), inverseJoinColumns = @JoinColumn(name = "id_film"))
     private Set<Film> filmsAVoir = new HashSet<>();
+    @ManyToMany
+    @JoinTable(name = "user_films_vus", joinColumns = @JoinColumn(name = "id_user"), inverseJoinColumns = @JoinColumn(name = "id_film"))
     private Set<Film> dejaVus = new HashSet<>();
 
     public Long getId() {

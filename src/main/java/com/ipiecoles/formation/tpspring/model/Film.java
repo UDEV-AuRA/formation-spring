@@ -1,9 +1,16 @@
 package com.ipiecoles.formation.tpspring.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Film {
 
+    @Id
     private Long id;
+    @Column
     private String titre;
+    @Column
+    @Enumerated(EnumType.STRING)
     private Type type;
 
     public Long getId() {
