@@ -15,7 +15,6 @@ public class AvecSpringAnnotation {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.ipiecoles.formation.tpspring");
         AvecSpringAnnotation bean = applicationContext.getBean(AvecSpringAnnotation.class);
         System.out.println(bean.recommandationService1.getRecommandation(1L));
-        applicationContext.close();
     }
 
 }
