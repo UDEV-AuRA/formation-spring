@@ -3,7 +3,6 @@ package com.ipiecoles.formation.tpspring.service;
 import com.ipiecoles.formation.tpspring.model.Film;
 import com.ipiecoles.formation.tpspring.model.User;
 import com.ipiecoles.formation.tpspring.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,10 +10,13 @@ import java.util.List;
 @Service
 public class RecommandationService {
 
-	@Autowired
 	private FilmService filmService;
-	@Autowired
 	private UserRepository userRepository;
+
+	public RecommandationService(FilmService filmService, UserRepository userRepository) {
+		this.filmService = filmService;
+		this.userRepository = userRepository;
+	}
 
 	public Film getRecommandation(Long idUser) {
 		User user = userRepository.findById(idUser);
