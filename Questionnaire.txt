@@ -1,0 +1,63 @@
+NOM
+PRENOM
+A envoyer à alexandre.petrillo@sully-group.fr
+sujet : MDD_042 [NOM]
+
+Groupe IGS Ecole IPI Lyon
+Le 11/12/2017
+
+
+Test d’évaluation 
+MDD_042 Architecture et Algorithme
+
+
+1.	Type d’architecture : citez un type d’architecture alternatif au client-serveur et expliquez brièvement leurs différences 
+
+
+
+
+
+
+
+2.	Quelles sont les 3 grandes briques qui constituent une application ? Et expliquez brièvement leurs rôles.
+
+ 
+
+
+
+
+
+3.	Architecture Web classique / évoluée
+Quel type de donnée est renvoyé au client sur les schémas suivants ? Et expliquez comment est construite la page html.
+
+a.	Architecture « server-side template »
+ 
+
+
+
+
+
+
+
+b.	Architecture « client-side template »
+ 
+ 
+4.	Pattern MVC : Décrivez les différentes étapes du processus d’exécution avec le pattern MVC.
+
+ 
+
+
+
+
+5.	Algorithme récursif
+Soit la fonction FoncR suivante :
+
+FoncR(x : un entier)
+  Si x = 0 Alors
+    Retourner 0
+  Sinonsi x = 1 Alors
+    Retourner 1
+  Sinon
+    Retourner FoncR(x-1) + FoncR(x-2)
+Quel est le résultat de l’exécution :
+Ecrire AlgoR(5)
